@@ -1,0 +1,70 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+      <section class="pg6" id="Home">
+        <div class="container">
+            <div class="home-flex">
+                <div class="home-text" data-aos="fade-left" data-aos-duration="1500"    data-aos-delay="50" data-aos-once="true" data-aos-once="true" data-aos-once="true">
+                    <!-- <img src="images/logo navbar.png" class="img-fluid" alt=""> -->
+                    <h2>Contact Us</h2>
+                    <div class="horizontal-line"></div>
+                    <p>How to get in touch with our team.</p>
+                    <a href="/about"><button type="button" class="btn home-btn btn-outline-light">Explore Further</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section class="contact" id="Contact">
+        <div class="container">
+            <div class="contact-text" data-aos="fade-right" data-aos-duration="1500"     data-aos-delay="50" data-aos-once="true" data-aos-once="true" data-aos-once="true" data-aos-once="true">
+                <h3>CONTACT US</h3>
+                <div class="horizontal-line"></div>
+                <p>Reach out to us with any questions, concerns, or inquiries. Our team is here to assist you. Let's connect!</p>
+            </div>
+            <form action="/contact" method="post" data-aos="fade-up" data-aos-duration="1500"     data-aos-delay="50" data-aos-once="true" data-aos-once="true" data-aos-once="true" data-aos-once="true">
+                {% csrf_token %}
+            <div class="contact-form">
+                <div class="contact-1">
+                    <div class="form-input">
+                        <div class="form-floating">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name" required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Enter Your Email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" name="subject" class="form-control" id="subject" placeholder="Enetr Your Subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-2">
+
+                    <div class="form-input">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" name="message" id="message" placeholder="Enter Your Message" required>
+                            <label for="message">Message</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-btn">
+                <a href="">
+                    <button type="submit" class="btn contactt-btn btn-primary">Submit</button>
+                </a>
+            </div>
+        </form>
+
+        </div>
+    </section>
+
+{% endblock %}

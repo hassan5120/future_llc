@@ -1,0 +1,344 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Services{% endblock %}
+
+{% block content %}
+
+<style>
+    .service-section-1 {
+        background-color: #f5f5f5;
+        padding: 40px 10px;
+        text-align: center;
+    }
+    .service-section {
+        padding: 40px 10px;
+        text-align: center;
+    }
+
+    .service-icon {
+        font-size: 4rem;
+    }
+
+    .service-title {
+        margin-top: 20px;
+    }
+
+    .service-subtitle {
+        font-size: 1.2rem;
+        color: #777;
+        margin-top: 10px;
+    }
+
+    .service-description {
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+
+    .sub-section {
+        margin-top: 30px;
+        padding-left: 30px;
+    }
+
+    .sub-title {
+        font-size: 1.1rem;
+        margin-top: 15px;
+    }
+
+    .sub-icon {
+        font-size: 2rem;
+        margin-right: 10px;
+    }
+
+    .sub-description {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    i{
+        color: #2c85c9;
+    }
+</style>
+
+      <section class="pg3" id="Home">
+        <div class="container">
+            <div class="home-flex">
+                <div class="home-text" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+                    <!-- <img src="images/logo navbar.png" class="img-fluid" alt=""> -->
+                    <h2>Medical Billing Services</h2>
+                    <div class="horizontal-line"></div>
+                    <p>Overview of our medical billing services.</p>
+                    <a href="/about"><button type="button" class="btn home-btn btn-outline-light">Explore Further</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center testimonials-page text-lg-start shadow-1-strong rounded container" style="padding-top: 70px; padding-bottom: 20px;">
+        <div class="testimonials-text pb-4" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="50">
+            <h3>Our Services</h3>
+            <div class="horizontal-line"></div>
+            <p>Take a Journey with Us and Explore Our Unparalleled Best-in-Class Services</p>
+        </div>
+<div class="container">
+    <!-- Service Section 1 -->
+    <div class="row service-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-12">
+            <i class="fas fa-hospital service-icon"></i>
+            <h2 class="service-title">Medical Billing</h2>
+            <h3 class="service-subtitle">Comprehensive Billing Solutions</h3>
+            <p class="service-description">Our expert team specializes in medical billing services, ensuring accurate and timely reimbursement for healthcare providers.</p>
+        </div>
+    </div>
+    <div class="row service-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-file-invoice-dollar sub-icon"></i>
+                <h4 class="sub-title">Claim Processing</h4>
+                <p class="sub-description">Efficiently process claims, submit them to insurance companies, and follow up for maximum reimbursement.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-balance-scale sub-icon"></i>
+                <h4 class="sub-title">Denial Management</h4>
+                <p class="sub-description">Proactively manage claim denials, identify root causes, and resubmit claims for approval.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-user-md sub-icon"></i>
+                <h4 class="sub-title">Patient Billing</h4>
+                <p class="sub-description">Transparent and easy-to-understand patient billing to ensure prompt payments and patient satisfaction.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Section 2 -->
+    <div class="row service-section-1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-12">
+            <i class="fas fa-stethoscope service-icon"></i>
+            <h2 class="service-title">Physical Billing</h2>
+            <h3 class="service-subtitle">Streamlined Revenue Cycle</h3>
+            <p class="service-description">We handle physical therapy billing with precision, streamlining the revenue cycle for your practice.</p>
+        </div>
+    </div>
+    <div class="row service-section-1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-clipboard-check sub-icon"></i>
+                <h4 class="sub-title">Insurance Claims</h4>
+                <p class="sub-description">Efficiently process insurance claims, reducing delays and increasing revenue.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-coins sub-icon"></i>
+                <h4 class="sub-title">Payment Collections</h4>
+                <p class="sub-description">We manage payment collections to ensure a steady cash flow for your practice.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-barcode sub-icon"></i>
+                <h4 class="sub-title">Coding Accuracy</h4>
+                <p class="sub-description">Accurate medical coding for physical therapy services to prevent claim denials.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Repeat the above structure for the remaining service sections -->
+
+    <!-- Service Section 3 -->
+    <div class="row service-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-12">
+            <i class="fas fa-flask service-icon"></i>
+            <h2 class="service-title">Laboratory Billing</h2>
+            <h3 class="service-subtitle">Precision Billing Solutions</h3>
+            <p class="service-description">Our laboratory billing services ensure accurate coding and billing for laboratory tests, maximizing your revenue.</p>
+        </div>
+    </div>
+    <div class="row service-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-vial sub-icon"></i>
+                <h4 class="sub-title">Test Coding</h4>
+                <p class="sub-description">Accurate coding of laboratory tests for precise billing and reimbursement.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-microscope sub-icon"></i>
+                <h4 class="sub-title">Advanced Testing</h4>
+                <p class="sub-description">Billing expertise for advanced and specialized laboratory testing.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-chart-line sub-icon"></i>
+                <h4 class="sub-title">Revenue Optimization</h4>
+                <p class="sub-description">Strategies to optimize revenue from laboratory services.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Section 4 -->
+    <div class="row service-section-1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-12">
+            <i class="fas fa-hand-holding-usd service-icon"></i>
+            <h2 class="service-title">AR Recovery</h2>
+            <h3 class="service-subtitle">Effective Accounts Receivable Recovery</h3>
+            <p class="service-description">Our AR recovery services help you recover outstanding payments, improving your cash flow.</p>
+        </div>
+    </div>
+    <div class="row service-section-1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-search-dollar sub-icon"></i>
+                <h4 class="sub-title">Debt Recovery</h4>
+                <p class="sub-description">Efficiently recover outstanding debts and unpaid invoices.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-chart-pie sub-icon"></i>
+                <h4 class="sub-title">Payment Analysis</h4>
+                <p class="sub-description">Analyze payment trends and develop strategies for recovery.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-handshake sub-icon"></i>
+                <h4 class="sub-title">Negotiation</h4>
+                <p class="sub-description">Negotiate with clients for mutually beneficial payment solutions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Section 5 -->
+    
+    <div class="row service-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-12">
+            <i class="fas fa-x-ray service-icon"></i>
+            <h2 class="service-title">Credentialing Services</h2>
+            <h3 class="service-subtitle">Billing Solutions essential for Healthcare providers</h3>
+            <p class="service-description">Credentialing in medical billing refers to the process of verifying and validating the qualifications, licenses, and certifications of healthcare providers and facilities. It is essential for ensuring that healthcare providers are eligible to bill insurance companies and receive payments for the services they provide.</p>
+        </div>
+    </div>
+    <div class="row service-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-file-image sub-icon"></i>
+                <h4 class="sub-title">Credentialing specializing in all the states</h4>
+                <p class="sub-description">Particularly those who want to participate in various insurance networks across all states.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-money-check-alt sub-icon"></i>
+                <h4 class="sub-title">Data gathering & CAQH Enrollment</h4>
+                <p class="sub-description">Gathering data and enrolling in the Council for Affordable Quality Healthcare (CAQH).</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-chart-area sub-icon"></i>
+                <h4 class="sub-title">Application submission & Payer communication</h4>
+                <p class="sub-description">Submitting applications for credentialing and effectively communicating with payers are critical steps in the process of becoming an in-network healthcare provider.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row service-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-file-image sub-icon"></i>
+                <h4 class="sub-title">Medicare revalidations and Yearly maintenance</h4>
+                <p class="sub-description">Medicare revalidation and yearly maintenance are essential processes for healthcare providers who participate in the Medicare program.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-money-check-alt sub-icon"></i>
+                <h4 class="sub-title">Re-Credentialing and Demographic updates</h4>
+                <p class="sub-description">These processes help providers stay in compliance with payer requirements and facilitate seamless billing and communication.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-chart-area sub-icon"></i>
+                <h4 class="sub-title">ERA,EFT & EDI enrollment</h4>
+                <p class="sub-description">Electronic Remittance Advice (ERA), Electronic Funds Transfer (EFT), and Electronic Data Interchange (EDI) enrollment are essential components of streamlining administrative processes in the healthcare industry.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Section 6 -->
+    <div class="row service-section-1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-12">
+            <i class="fas fa-hospital service-icon"></i>
+            <h2 class="service-title">Hospital Billing</h2>
+            <h3 class="service-subtitle">Billing Solutions for Hospitals</h3>
+            <p class="service-description">Our hospital billing services are designed to streamline billing processes for hospitals, ensuring timely payments and revenue optimization.</p>
+        </div>
+    </div>
+    <div class="row service-section-1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-file-invoice sub-icon"></i>
+                <h4 class="sub-title">Inpatient Billing</h4>
+                <p class="sub-description">Efficient billing for inpatient services and procedures.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-user-nurse sub-icon"></i>
+                <h4 class="sub-title">Outpatient Billing</h4>
+                <p class="sub-description">Accurate billing for outpatient services and clinics.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-file-medical-alt sub-icon"></i>
+                <h4 class="sub-title">Medical Coding</h4>
+                <p class="sub-description">Precise medical coding for hospital services and procedures.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Section 7 -->
+    <div class="row service-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-12">
+            <i class="fas fa-search-dollar service-icon"></i>
+            <h2 class="service-title">Coverage Discovery</h2>
+            <h3 class="service-subtitle">Discover Unclaimed Coverage</h3>
+            <p class="service-description">Our coverage discovery services help healthcare providers identify unclaimed insurance coverage, ensuring maximum reimbursement.</p>
+        </div>
+    </div>
+    <div class="row service-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-binoculars sub-icon"></i>
+                <h4 class="sub-title">Coverage Analysis</h4>
+                <p class="sub-description">Thorough analysis of patient coverage to identify potential claims.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-dollar-sign sub-icon"></i>
+                <h4 class="sub-title">Reimbursement Maximization</h4>
+                <p class="sub-description">Maximize reimbursement by identifying and claiming unutilized coverage.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sub-section">
+                <i class="fas fa-file-alt sub-icon"></i>
+                <h4 class="sub-title">Claim Submission</h4>
+                <p class="sub-description">Efficiently submit claims for discovered coverage opportunities.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+{% endblock %}
+    

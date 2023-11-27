@@ -1,0 +1,205 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Testimonials{% endblock %}
+
+{% block content %}
+
+      <section class="pg5" id="Home">
+        <div class="container">
+            <div class="home-flex" data-aos="fade-left" data-aos-duration="1500"  data-aos-delay="50" data-aos-once="true">
+                <div class="home-text">
+                    <h2>Testimonials and Case Studies</h2>
+                    <div class="horizontal-line"></div>
+                    <p>Success stories from satisfied clients.</p>
+                    <a href="/about"><button type="button" class="btn home-btn btn-outline-light">Explore Further</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+<section class="text-center testimonials-page text-lg-start shadow-1-strong rounded container" style="padding-top: 70px;">
+    <div class="testimonials-text pb-4" data-aos="fade-right" data-aos-duration="1500"  data-aos-delay="50" data-aos-once="true">
+        <h3>OUR CUSTOMERS FEEDBACK</h3>
+        <div class="horizontal-line"></div>
+        <p>Read what our satisfied clients have to say about our services.</p>
+    </div>
+
+</section>
+
+<!-- Dynamic -->
+<div class="container">
+<div class="row">
+  {% for review in reviews|slice:":4" %}
+  <div class="col-xxl-6 col-lg-6 py-3" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50"data-aos-once="true">
+    <div class="card p-3" style="background-color: #f5f5f5; height: 250px;">
+      <div class="m-3">
+        <div class="row">
+          {% if review.image %}
+          <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+            <div style="background-image: url({{ review.image.url }}); background-position: center; background-size: cover; width: 150px; height: 150px; border-radius: 50%;"></div>
+          </div>
+          {% endif %}
+          <div class="{% if review.image %}col-lg-8{% else %}col-lg-12{% endif %}">
+            <p class="text-muted fw-light mb-4">
+              "{{ review.review_text }}"
+            </p>
+            <p class="fw-bold lead mb-2"><strong>{{ review.name }}</strong></p>
+            <p class="fw-bold text-muted mb-0">{{ review.field_name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div id="hidden-reviews" style="display: none;">
+<div class="row">
+  {% for review in reviews|slice:"4:" %}
+  <div class="col-xxl-6 col-lg-6 py-3" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+    <div class="card p-3" style="background-color: #f5f5f5; height: 250px;">
+      <div class="m-3">
+        <div class="row">
+          {% if review.image %}
+          <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+            <div style="background-image: url({{ review.image.url }}); background-position: center; background-size: cover; width: 150px; height: 150px; border-radius: 50%;"></div>
+          </div>
+          {% endif %}
+          <div class="{% if review.image %}col-lg-8{% else %}col-lg-12{% endif %}">
+            <p class="text-muted fw-light mb-4">
+              "{{ review.review_text }}"
+            </p>
+            <p class="fw-bold lead mb-2"><strong>{{ review.name }}</strong></p>
+            <p class="fw-bold text-muted mb-0">{{ review.field_name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+</div>
+
+{% if reviews|length > 4 %}
+<div class="text-center" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+  <button id="show-more-btn" class="btn btn-primary" onclick="showMoreReviews()">Show All</button>
+</div>
+{% endif %}
+
+
+<script>
+  function showMoreReviews() {
+    var hiddenReviews = document.getElementById("hidden-reviews");
+  
+    if (hiddenReviews.style.display === "none") {
+      hiddenReviews.style.display = "block";
+      document.getElementById("show-more-btn").textContent = "Show Less";
+    } else {
+      hiddenReviews.style.display = "none";
+      document.getElementById("show-more-btn").textContent = "Show All";
+    }
+  }
+  </script>
+  
+
+
+
+
+
+
+<div class="container">
+  <div class="py-3" style="display: flex; justify-content: center;" data-aos="fade-left" data-aos-duration="1500"  data-aos-delay="50" data-aos-once="true">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+  Enter your Review Here
+</button>
+</div>
+</div>
+
+<form action="/submit_review" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Submit a Review</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" name="rev-name" class="form-control" id="name" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" name="rev-email" class="form-control" id="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="field">Field:</label>
+                  <input type="text" name="rev-field" class="form-control" id="field" required>
+              </div>
+              <div class="form-group">
+                  <label for="image">Image: <small class="text-primary"> - Optional</small></label>
+                  <input type="file" name="rev-image" class="form-control" id="image">
+              </div>
+              <div class="form-group">
+                  <label for="review">Review:</label>
+                  <textarea class="form-control" name="rev-text" id="review" rows="4" required></textarea>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" id="submitReview">Submit</button>
+          </div>
+      </div>
+  </div>
+</div>
+</form>
+<!-- Add a div for the success message -->
+<!-- <div id="successMessage" class="" style="display: none;">
+  Review submitted successfully!
+</div> -->
+
+<!-- ...rest of your modal and form HTML as before... -->
+
+
+<!-- <script>
+  $(document).ready(function () {
+      $("#submitReview").click(function () {
+          var name = $("#name").val();
+          var email = $("#email").val();
+          var review = $("#review").val();
+
+          // Send the data to a Django view using AJAX
+          $.ajax({
+              type: "POST",
+              url: "{% url 'submit_review' %}",
+              data: {
+                  'name': name,
+                  'email': email,
+                  'review': review,
+                  'csrfmiddlewaretoken': '{{ csrf_token }}'
+              },
+              success: function (data) {
+                  if (data.message === 'Review submitted successfully') {
+                      $("#successMessage").text(data.message);
+                      $("#successMessage").show();
+
+                      setTimeout(function () {
+                          $('#myModal').modal('hide');
+                      }, 1000);
+                  }
+              }
+          });
+      });
+  });
+</script> -->
+
+
+{% endblock %}
+
+
+
