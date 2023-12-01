@@ -7,11 +7,25 @@
 
 {% block content %}
 
+<style>
+
+.testimonials-card{
+  height: 250px;
+}
+
+@media (max-width:1024px) {
+.testimonials-card{
+  height: 100%;
+}
+  }
+</style>
+
+
       <section class="pg5" id="Home">
         <div class="container">
             <div class="home-flex" data-aos="fade-left" data-aos-duration="1500"  data-aos-delay="50" data-aos-once="true">
                 <div class="home-text">
-                    <h2>Testimonials and Case Studies</h2>
+                    <h2><b>Testimonials and Case Studies</b></h2>
                     <div class="horizontal-line"></div>
                     <p>Success stories from satisfied clients.</p>
                     <a href="/about"><button type="button" class="btn home-btn btn-outline-light">Explore Further</button></a>
@@ -22,7 +36,7 @@
   
 <section class="text-center testimonials-page text-lg-start shadow-1-strong rounded container" style="padding-top: 70px;">
     <div class="testimonials-text pb-4" data-aos="fade-right" data-aos-duration="1500"  data-aos-delay="50" data-aos-once="true">
-        <h3>OUR CUSTOMERS FEEDBACK</h3>
+        <h3><b>OUR CUSTOMERS FEEDBACK</b></h3>
         <div class="horizontal-line"></div>
         <p>Read what our satisfied clients have to say about our services.</p>
     </div>
@@ -34,7 +48,7 @@
 <div class="row">
   {% for review in reviews|slice:":4" %}
   <div class="col-xxl-6 col-lg-6 py-3" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50"data-aos-once="true">
-    <div class="card p-3" style="background-color: #f5f5f5; height: 250px;">
+    <div class="card p-3 testimonials-card" style="background-color: #f5f5f5;">
       <div class="m-3">
         <div class="row">
           {% if review.image %}
@@ -60,7 +74,7 @@
 <div class="row">
   {% for review in reviews|slice:"4:" %}
   <div class="col-xxl-6 col-lg-6 py-3" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
-    <div class="card p-3" style="background-color: #f5f5f5; height: 250px;">
+    <div class="card p-3 testimonials-card" style="background-color: #f5f5f5;">
       <div class="m-3">
         <div class="row">
           {% if review.image %}
