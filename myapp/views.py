@@ -18,6 +18,13 @@ def home(request):
         first_letter = username[0]
     return render(request, 'axit.html', {'first_letter':first_letter})
 
+def team(request):
+    first_letter=''
+    if request.user.is_authenticated:
+        username = request.user.username
+        first_letter = username[0]
+    return render(request, 'team.html', {'first_letter':first_letter})
+
 def about(request):
     first_letter=''
     if request.user.is_authenticated:
@@ -179,8 +186,7 @@ def register(request):
                     recipient_list=[registeremail],
                     fail_silently=False,
                 )
-                messages.success(
-                    request, 'Registration successful.')
+                messages.success(request, 'Registration successful.')
                 return redirect('/')
         else:
             messages.warning(request, 'Passwords do not match.')

@@ -140,6 +140,15 @@
     /* z-index: -1; */
 }
 
+.team_sec {
+    background-image: linear-gradient(rgba(4, 9, 10, 0.7), rgba(4, 9, 10, 0.7)), url(our_team.avif);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 100px;
+    /* z-index: -1; */
+}
+
 .pg4 {
     background-image: linear-gradient(rgba(4, 9, 10, 0.7), rgba(4, 9, 10, 0.7)), url(img10.jpg);
     background-position: center;

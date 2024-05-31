@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Our Team
+{% endblock %}
+
+{% block content %}
+  <style>
+    .card {
+      margin-bottom: 30px;
+      border: none;
+      border-radius: 15px;
+      height: 440px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      background-color: #f5f5f5 !important;
+      color: #212529 !important;
+    }
+    
+    .card-body {
+      background-color: #f5f5f5 !important;
+      color: #212529 !important;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card-img-top {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 342px;
+      object-fit: cover;
+    }
+    
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    
+    .card-text {
+      color: #212529 !important;
+    }
+    
+    .team-card {
+      margin-top: 20px;
+      justify-content: center;
+    }
+    
+    .team-card .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      height: 350px !important;
+    }
+    
+    .team-card .card-body {
+      padding: 30px;
+      background-color: #f5f5f5 !important;
+      color: #212529 !important;
+    }
+    
+    .team-card .card-body {
+      padding: 30px;
+      background-color: #f5f5f5 !important;
+      color: #212529 !important;
+    }
+    
+    .team-card .card-body .card-text {
+      color: #212529 !important;
+      padding-top: 18px;
+    }
+    
+    .icon-box {
+      text-align: center;
+    }
+    
+    .icon-box i {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #2c85c9;
+    }
+    
+    @media (min-width: 768px) {
+      .col-md-4 {
+        flex: 0 0 auto;
+        width: 30%;
+      }
+    }
+  </style>
+
+  <section class="team_sec" id="Home">
+    <div class="container">
+      <div class="home-flex">
+        <div class="home-text" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
+          <!-- <img src="images/logo navbar.png" class="img-fluid" alt=""> -->
+          <h2><b>Our Team</b></h2>
+          <div class="horizontal-line"></div>
+          <p>Get to know the skilled and dedicated individuals powering our organization.</p>
+          <a href="/about"><button type="button" class="btn home-btn btn-outline-light">Explore Further</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center testimonials-page text-lg-start shadow-1-strong rounded container" style="padding-top: 70px; padding-bottom: 20px;">
+    <div class="testimonials-text pb-4" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="50">
+      <h3><b>Meet Our Team</b></h3>
+      <div class="horizontal-line"></div>
+      <p>Introducing the talented professionals who drive our success forward.</p>
+    </div>
+  </section>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="{% static 'hassaan.jpeg' %}" class="card-img-top" alt="Founder" />
+          <div class="card-body text-center">
+            <h5 class="card-title">Muhammad Hassaan Anwar</h5>
+            <p class="card-text">Founder</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="{% static 'anas.jpeg' %}" class="card-img-top" alt="Co-Founder" />
+          <div class="card-body text-center">
+            <h5 class="card-title">Anas Mohsin Khan</h5>
+            <p class="card-text">Co-Founder</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="{% static 'muaz.jpeg' %}" class="card-img-top" alt="Founder" />
+          <div class="card-body text-center">
+            <h5 class="card-title">Moaz Anwar</h5>
+            <p class="card-text">Director Sales and Marketing</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="{% static 'ouman.jpeg' %}" class="card-img-top" alt="Chief Operations Officer" />
+          <div class="card-body text-center">
+            <h5 class="card-title">Ouman Tayyab</h5>
+            <p class="card-text">Chief Operations Officer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row team-card">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="icon-box">
+              <i class="fas fa-calculator"></i>
+              <h5 class="card-title">Expert Medical Billing Team</h5>
+              <p class="card-text">Our team at FUTURE SIGNS is a blend of seasoned professionals adept at navigating the complexities of medical billing in the USA. With expertise in coding, regulations, compliance, and client services, we ensure robust support for our clients nationwide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="icon-box">
+              <i class="fas fa-user-tie"></i>
+              <h5 class="card-title">Diverse Skill Sets, One Goal</h5>
+              <p class="card-text">From skilled billers to compliance experts, each team member brings a unique skill set and a commitment to excellence. Together, we streamline billing processes, maximize reimbursements, and reduce administrative burdens for healthcare providers across the country.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="icon-box">
+              <i class="fas fa-chart-line"></i>
+              <h5 class="card-title">Efficiency Nationwide</h5>
+              <p class="card-text">United in our dedication, we work tirelessly to streamline billing processes across the USA. Our goal is to alleviate the administrative burdens for healthcare providers, allowing them to focus on delivering quality care to their patients.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
