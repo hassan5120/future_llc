@@ -157,3 +157,10 @@ dmypy.json
 .dockerenv
 Dockerfile
 docker-compose.yaml
+
+.htaccess
+passenger_wsgi.py
+/tmp
+/staticfiles
+/.well-known
+/static/admin
